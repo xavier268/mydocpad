@@ -5,15 +5,13 @@
 
 <body>
 
+<div>  <%- @partial('lang') %>  </div>
 
         <div>
-        Accessing document parameter : <%= @document.param1 %>
-        <br/>
-        Start of content rendering  ...
-        <br/>
+        @document.param1 = <%= @document.param1 %>
+        <hr/>
             <%- @content %>
-        <br/>
-         ... end of content rendering.
+        <hr/>
        </div>
 
 

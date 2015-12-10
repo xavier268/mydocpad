@@ -1,0 +1,14 @@
+-----
+param1: "Ceci est le premier parametre du document"
+layout: "mylayout"
+-----
+
+# Salut tout le monde !
+
+Test de l'index Français.
+
+Le titre du site : <%= @site.title %>
+
+Le lien vers cette page : <%= @document.relativeOutPath %> ou <%= @document.outPath %>
+
+L'autre langue : <%= @toEnglish( @document ) %> 
