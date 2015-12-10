@@ -17,5 +17,8 @@
     "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-multilang": "^2.0.1",
     "docpad-plugin-partials": "~2.9.2"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.2.22"
   }
 }
