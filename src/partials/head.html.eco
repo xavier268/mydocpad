@@ -2,7 +2,16 @@
     <title>Title from document meta : <%= @document.title %> </title>
     <meta charset='utf-8'/> <!-- needed !! -->
 
+    <!-- retrieve needed google fonts + icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
     <!-- Import styles & scripts required -->
     <%- @getBlock("styles").toHTML() %>
     <%- @getBlock("scripts").toHTML() %>
+
+    <!-- material design lite -->
+    <link rel="stylesheet" href="/material-design-lite/material.min.css">
+    <script src="/material-design-lite/material.min.js"></script>
+
 <!-- end partial head -->

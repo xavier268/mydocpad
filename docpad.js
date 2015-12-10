@@ -6,6 +6,10 @@ module.exports = {
 
   checkVersion : true,
   collections : {},
+  filesPaths: [
+        'files',
+        '../bower_components'
+    ],
   templateData : {
           site: {
                 url : "MyURLConfig",
