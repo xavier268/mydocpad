@@ -9,6 +9,7 @@ node_modules/.bin/bower install
 echo "================= Versions ==================="
 echo "docpad : $(node_modules/.bin/docpad --version)"
 echo "bower : $(node_modules/.bin/bower --version)"
+echo "s3cmd : $(s3cmd --version)"
 echo "node : $(node --version)"
 echo "npm : $(npm --version)"
 echo "$(npm ls -g --depth=0)"
