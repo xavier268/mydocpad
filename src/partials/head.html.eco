@@ -1,0 +1,8 @@
+<!-- start partial head -->
+    <title>Title from document meta : <%= @document.title %> </title>
+    <meta charset='utf-8'/> <!-- needed !! -->
+
+    <!-- Import styles & scripts required -->
+    <%- @getBlock("styles").toHTML() %>
+    <%- @getBlock("scripts").toHTML() %>
+<!-- end partial head -->

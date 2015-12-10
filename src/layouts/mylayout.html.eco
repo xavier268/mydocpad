@@ -1,0 +1,25 @@
+<html>
+<head>
+    <%- @partial('head') %>
+</head>
+
+<body>
+
+
+        <div>
+        Accessing document parameter : <%= @document.param1 %>
+        <br/>
+        Start of content rendering  ...
+        <br/>
+            <%- @content %>
+        <br/>
+         ... end of content rendering.
+       </div>
+
+
+
+
+
+
+</body>
+</html>

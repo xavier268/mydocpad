@@ -1,0 +1,21 @@
+{
+  "name": "mydocpad",
+  "version": "1.0.0",
+  "description": "Basic Custom Docpad Skeletton",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/docpad run"
+  },
+  "author": "xavier@gandillot.com",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.0",
+    "docpad": "~6.78.4",
+    "docpad-plugin-coffeescript": "~2.5.0",
+    "docpad-plugin-eco": "~2.1.0",
+    "docpad-plugin-livereload": "~2.7.1",
+    "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-partials": "~2.9.2"
+  }
+}

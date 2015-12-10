@@ -1,0 +1,15 @@
+{
+  "name": "mydocpad",
+  "description": "Basic Custom Docpad Skeletton",
+  "main": "index.js",
+  "authors": [
+    "xavier@gandillot.com"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "material-design-lite": "~1.0.6"
+  }
+}

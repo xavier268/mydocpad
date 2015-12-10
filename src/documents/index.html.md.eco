@@ -1,0 +1,10 @@
+-----
+param1: "This is the first parameter from the document"
+layout: "mylayout"
+-----
+
+# hello world !
+
+Test of index file
+
+This comes from the config file : <%= @site.title %>
