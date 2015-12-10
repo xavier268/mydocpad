@@ -32,8 +32,9 @@ module.exports = {
 
 // Being provided with a document, it returns the url to the same doc in English
 function toEnglish(doc) {
-  if(!doc) return "#";
+  if(!doc ) return "#";
   var s = "/" + doc.relativeOutPath; // there is no leading "/" when called directly ...
+  if(!s.match(/^\/fr\//)) return "#";
   return s.replace("/fr/","/en/");
 }
 
@@ -42,5 +43,6 @@ function toEnglish(doc) {
 function toFrench(doc) {
   if(!doc) return "#";
   var s = "/" + doc.relativeOutPath; // there is no leading "/" when called directly ...
+  if(!s.match(/^\/en\//)) return "#";
   return s.replace("/en/","/fr/");
 }
