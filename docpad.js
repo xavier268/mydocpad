@@ -1,3 +1,4 @@
+"use strict";
 /*******************************************
 *      DOCPAD configuration file (js version)
 *
@@ -7,8 +8,7 @@ module.exports = {
   checkVersion : true,
   collections : {},
   filesPaths: [
-        'files',
-        '../bower_components'
+        'files'
     ],
   templateData : {
           site: {
