@@ -1,4 +1,7 @@
 "use strict";
+
+// globals @getCollection
+
 /*******************************************
 *      DOCPAD configuration file (js version)
 *
@@ -6,9 +9,11 @@
 module.exports = {
 
   checkVersion : true,
-  collections : {},
-  filesPaths: [
-        'files'
+  collections : {
+    },
+  filesPaths: [     // Where to get static files from ...
+        'files',
+        '../bower_components/'      // Copy bower_components dist files  to out/
     ],
   templateData : {
           site: {

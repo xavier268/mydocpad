@@ -1,6 +1,8 @@
 -----
 param1: "Ceci est le premier parametre du document"
 layout: "mylayout"
+title: "Index Français"
+menu: "IndexFr"
 -----
 
 # Salut tout le monde !
@@ -11,4 +13,4 @@ Le titre du site : <%= @site.title %>
 
 Le lien vers cette page : <%= @document.relativeOutPath %> ou <%= @document.outPath %>
 
-L'autre langue : <%= @toEnglish( @document ) %> 
+L'autre langue : <%= @toEnglish( @document ) %>

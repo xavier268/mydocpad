@@ -1,0 +1,13 @@
+
+<!--
+A demo automatic navigation menu, based on metadata from the documents.
+-->
+<ul>
+    <% for page in @getCollection("html").findAll({menu:{$exists:true}}).toJSON(): %>
+        <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
+            <a href="<%= page.url %>">
+                <%= page.title %>
+            </a>
+        </li>
+    <% end %>
+</ul>

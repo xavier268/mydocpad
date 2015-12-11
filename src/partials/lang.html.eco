@@ -1,9 +1,11 @@
-<!-- partial lang : to change language -->
 
+<!--
+Offer to jump to the same page in the other language.
+-->
+<div>
 <a href="<%-@toEnglish(@document)%>" ><img src="/images/flags/uk.svg" height="30dp"/></a>
 &nbsp;
 <a href="<%-@toEnglish(@document)%>" ><img src="/images/flags/us.svg" height="30dp" /></a>
 &nbsp;
 <a href="<%-@toFrench(@document)%>" ><img src="/images/flags/fr.svg"  height="30dp" /></a>
-
-<!-- end partial lang -->
+</div>

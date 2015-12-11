@@ -1,6 +1,8 @@
 -----
 param1: "This is the first parameter from the document"
 layout: "mylayout"
+title: "English index"
+menu: "IndexUK"
 -----
 
 # hello world !

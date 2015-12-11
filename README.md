@@ -7,6 +7,10 @@ suitable for AWS S3 hosting.
 
     ./run.sh
 
+## CSS Framework
+
+For the moment, Bootstrap 3 is the default.
+
 ## Exporting to S3
 
 First, ensure your credentials are set correctly, and the target bucket is
