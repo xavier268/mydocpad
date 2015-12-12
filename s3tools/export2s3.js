@@ -91,6 +91,7 @@ function save() {
         if(path.match(/\.png?$/i)) return "image/png";
         if(path.match(/\.jp(e)?g?$/i)) return "image/jpeg";
         if(path.match(/\.gif$/i)) return "image/gif";
+        if(path.match(/ss$/i)) return "text/css";
 
         return "application/octet-stream";
   }
