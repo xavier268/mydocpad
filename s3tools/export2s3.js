@@ -4,22 +4,22 @@
 *   Credentials should be available locally in ~/.aws/credentials
 ******************************************************/
 
-const TARGET = "test.gandillot.com";  // Adjsut as needed.
-const REGION = "eu-west-1"; // Adjust as needed, but REQUIRED !
 const UP = "\x1B[1A"; // Move 1 line up when printed ...
 const CLEAR = "\x1B[2J"; // Clear screen
 const S = "\x1B[s"; // Save cursor pos
 const U = "\x1B[u"; // Restore cursor pos
 const K = "\x1B[K"; // Kill rest of line
 
+var conf = require("./export2s3.conf");
 var walk = require('walk-fs');
-var aws = require("aws-sdk"); aws.config.update({region: REGION});
+var aws = require("aws-sdk"); aws.config.update({region: conf.REGION});
 var s3 = new aws.S3();
 var fs = require("fs");
 
+if(!conf | !conf.TARGET ) throw new Error("Check your configuration file ?");
 
-console.log("Preparing to export 'out/' to s3 bucket ", TARGET );
-console.log("The bucket must exist, and you must have the following access rights : ");
+console.log("\nPreparing to export 'out/' to s3 bucket ", conf.TARGET );
+console.log("The bucket must exist, and you must have adequat access rights");
 console.log("---------------------------\n",{
     "Version": "2012-10-17",
     "Statement": [
@@ -36,7 +36,7 @@ console.log("---------------------------\n",{
                 "s3:GetBucketWebsite",
                 "s3:PutBucketWebsite"
             ],
-            "Resource": "arn:aws:s3:::"+TARGET
+            "Resource": "arn:aws:s3:::"+conf.TARGET
         },
         {
             "Effect": "Allow",
@@ -46,7 +46,7 @@ console.log("---------------------------\n",{
                 "s3:DeleteObject",
                 "s3:PutObjectAcl"
             ],
-            "Resource": "arn:aws:s3:::"+TARGET+"/*"
+            "Resource": "arn:aws:s3:::"+conf.TARGET+"/*"
         }
     ]
 },"\n---------------------------");
@@ -148,7 +148,7 @@ function save() {
 
   function configureWebsite(error,index) {
       var websiteParams = {
-        Bucket: TARGET,
+        Bucket: conf.TARGET,
         WebsiteConfiguration: {
           ErrorDocument: {
             Key: error
@@ -176,7 +176,7 @@ function save() {
             throw new Error("Trying to send an empty key to S3");
             }
         s3.putObject({
-              'Bucket':TARGET,
+              'Bucket':conf.TARGET,
               'Key':key,
               'ACL':'public-read',
               'Body':data,

@@ -18,6 +18,8 @@ and is correctly setup in s3tools/export2s3.js.
 
 If you use your own DNS, you amy want to check it is correctly set up.
 
+**configure s3tools/export2s3.conf**
+
 Then, execute :
 
     ./export2s3.sh
