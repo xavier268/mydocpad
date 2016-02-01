@@ -11,7 +11,7 @@
   "author": "xavier@gandillot.com",
   "license": "MIT",
   "dependencies": {
-    "bower": "^1.7.1",
+    "bower": "^1.7.7",
     "docpad": "~6.78.4",
     "docpad-plugin-coffeescript": "~2.5.0",
     "docpad-plugin-eco": "~2.1.0",
